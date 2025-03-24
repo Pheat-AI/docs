@@ -1,0 +1,168 @@
+---
+title: Launching a Training Job
+description: "How to configure and launch your LoRA training job"
+---
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full aspect-video"
+  src="https://storage.googleapis.com/remade-v2/website/Explainer%20Video%20Launch%20Job.mp4"
+></video>
+
+
+After [uploading and processing your data](/lora-training/uploading-data), you're ready to configure and launch your LoRA training job. This section guides you through the process.
+
+## Configuring Your Training Job
+
+After selecting your processed data and clicking "Configure Training," you'll see a configuration modal:
+
+<Frame caption="Training configuration modal">
+  <img src="/images/lora/train/training-modal.png" alt="Training configuration modal" />
+</Frame>
+
+In this modal, you can:
+- Name your LoRA
+- Add a description to help identify it later
+- Select a training settings preset
+
+
+<Note>
+Image to Video training only supports video data.
+</Note>
+
+## Launching Training
+
+Once you've configured all settings, scroll to the bottom of the modal and click the "Start Training" button:
+
+<Frame>
+  <img src="/images/lora/train/training-start-button.png" alt="Start training button" />
+</Frame>
+
+After a moment, you'll be redirected to the training job page where you can monitor your job's progress.
+
+<Warning>
+If you are training on large datasets, be sure to configure the number of repeats.
+</Warning>
+
+## Monitoring Training Progress
+
+After starting your training job, you'll be taken to the training jobs section where you can monitor progress:
+
+<Frame caption="Training progress">
+  <img src="/images/lora/train/training-progress.png" alt="Training progress page" />
+</Frame>
+
+You can safely navigate away from this page; the training will continue in the background.
+
+
+### Example Configuration
+
+Here's an example of a completed training configuration:
+
+<Accordion title="Advanced Configuration Example">
+```json
+{
+  "model": {
+    "type": "wan-i2v",
+    "dtype": "bfloat16",
+    "modelSize": "14b",
+    "resolution": "480p",
+    "transformerDtype": "float8",
+    "timestepSampleMethod": "uniform"
+  },
+  "adapter": {
+    "rank": 32,
+    "type": "lora",
+    "dtype": "bfloat16"
+  },
+  "training": {
+    "epochs": 50,
+    "numGpus": 1,
+    "warmupSteps": 50,
+    "pipelineStages": 1,
+    "gradientClipping": 1,
+    "microBatchSizePerGpu": 1,
+    "gradientAccumulationSteps": 4
+  },
+  "optimizer": {
+    "lr": 0.00002,
+    "eps": 1e-8,
+    "type": "adamw_optimi",
+    "betas": [0.9, 0.99],
+    "weightDecay": 0.01
+  },
+  "dataset": {
+    "maxAr": 2,
+    "minAr": 0.5,
+    "numRepeats": 6,
+    "resolutions": [480],
+    "frameBuckets": [1, 17, 33, 49, 65, 81],
+    "numArBuckets": 7,
+    "enableArBucket": false,
+    "useResolutionsMode": true
+  },
+  "misc": {
+    "saveDtype": "bfloat16",
+    "stepsPerPrint": 1,
+    "videoClipMode": "multiple_overlapping",
+    "partitionMethod": "parameters",
+    "cachingBatchSize": 8,
+    "saveEveryNEpochs": 5,
+    "activationCheckpointing": true,
+    "checkpointEveryNMinutes": 120
+  }
+}
+```
+</Accordion>
+
+
+{/*
+### Model Configuration
+
+Choose the model configuration that's most suitable for your data and the base model you want to train on:
+
+<Frame>
+  <img src="/images/lora/model-configuration.png" alt="Model configuration" />
+</Frame>
+
+## Training Parameters
+
+The platform configures optimal training parameters based on your selected model type, but it's helpful to understand the key parameters:
+
+### Base Model
+
+Select the base model to use for training your LoRA. Options may include:
+- Hunyuan
+- Wan
+- Other available foundation models
+
+### Training Steps
+
+The number of training iterations:
+- 800-1000 steps work well for most use cases
+- More steps may be needed for complex concepts or larger datasets
+- Fewer steps can be used for simpler concepts
+
+### Learning Rate
+
+Controls how quickly the model adapts to your data:
+- Default values work well for most cases
+- Lower values (0.0001-0.001) result in more stable but slower training
+- Higher values may train faster but risk instability
+
+### LoRA Rank
+
+Determines the capacity of your adaptation:
+- Higher ranks can capture more complex features but use more memory
+- Lower ranks are more efficient but may capture fewer details
+- Values between 8-32 work well for most cases
+*/}
+
+## Next Steps
+
+After your training completes, you'll be able to:
+1. [Test your LoRA](/lora-training/testing-lora) with different prompts
+2. Download your trained model
+3. Deploy it to supported platforms
