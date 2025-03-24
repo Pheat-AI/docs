@@ -1,0 +1,72 @@
+---
+title: LoRA Training Best Practices
+description: "Advanced tips and recommendations for getting the best results from your LoRA training"
+---
+
+# LoRA Training Best Practices
+
+This guide provides advanced tips and strategies to help you get the best results from your LoRA training on the Remade platform.
+
+## Dataset Optimization
+
+### Content Diversity vs. Consistency
+- **Finding the balance**: Include enough variety to help the model generalize, but maintain consistency in the core concept
+- **Controlled variety**: Change one aspect at a time (background, angle, lighting) while keeping the target concept stable
+
+### Dataset Curation
+- **Manual filtering**: Review and remove outliers, blurry images, or content that doesn't clearly represent your target concept
+- **Progressive dataset building**: Start with a small, highly curated dataset and gradually add more examples as you refine your approach
+
+## Training Strategies
+
+### Hyperparameter Tuning
+- **Learning rate**: Start with the default, then experiment with lower values for refinement
+- **Batch size**: Larger batch sizes can stabilize training but require more memory
+- **Training steps**: Monitor sample outputs during training to identify when your model reaches optimal performance
+
+### Checkpoint Selection
+- **Not always the final checkpoint**: The last training checkpoint isn't always the best; review outputs at different intervals
+- **Saving intermediate checkpoints**: Enable saving checkpoints at regular intervals to compare results
+
+## Prompt Engineering with LoRAs
+
+### Effective Trigger Words
+- **Combining triggers**: Experiment with combining your trigger word with descriptive terms
+- **Placement in prompts**: Try placing your trigger word at different positions in your prompt
+
+### Strength Control
+- **Adjusting influence**: Learn how to control the strength of your LoRA's effect using model-specific parameters
+- **Weighted combinations**: Techniques for combining multiple LoRAs with different weights
+
+## Troubleshooting
+
+### Common Issues and Solutions
+- **Overfitting**: Signs of overfitting and how to address it
+- **Underfitting**: When your LoRA isn't learning the desired features
+- **Concept bleeding**: When unwanted elements appear in your generated content
+
+### Iterative Improvement
+- **A/B testing**: Methods for systematically comparing different training approaches
+- **Dataset refinement**: Using training results to guide improvements to your dataset
+
+## Advanced Techniques
+
+### Multi-concept Training
+- **When to use**: Guidelines for when to train multiple concepts together vs. separately
+- **Balancing datasets**: How to ensure all concepts are learned equally
+
+### Transfer Learning with LoRAs
+- **Starting from existing LoRAs**: How to build upon other LoRAs
+- **Domain adaptation**: Adapting LoRAs from one domain to another
+
+<Tip>
+Remember that LoRA training is both an art and a science. Experimentation and iteration are key to achieving the best results.
+</Tip>
+
+## Community Resources
+
+Join our community to discuss LoRA training techniques and share your results:
+
+- [Remade Discord Server](#)
+- [LoRA Training Forum](#)
+- [User Showcase](#) 

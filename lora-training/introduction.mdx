@@ -1,0 +1,62 @@
+---
+title: LoRA Trainer Introduction
+description: "Learn how to train LoRA models on the Remade platform"
+---
+
+# Introduction to LoRA Training
+
+Welcome to the Remade LoRA Trainer! This guide will walk you through the process of training LoRA (Low-Rank Adaptation) models on our platform. LoRA is a technique that allows you to efficiently fine-tune large language models for specific tasks or styles.
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full aspect-video"
+  src="https://storage.googleapis.com/remade-v2/website/Main%20Launch%20Video%20V2.mp4"
+></video>
+
+## What is LoRA?
+
+LoRA (Low-Rank Adaptation) is an efficient fine-tuning technique that significantly reduces the number of trainable parameters by adding pairs of rank-decomposition matrices to existing weights. This approach:
+
+- Reduces memory requirements
+- Speeds up training
+- Enables faster switching between different adaptations
+- Maintains quality comparable to full fine-tuning
+
+## Overview of the Training Process
+
+Training a LoRA model on our platform involves three main steps:
+
+1. **Sourcing Your Dataset**: Selecting high-quality, consistent data that clearly represents what you want your LoRA to learn.
+
+2. **Uploading Data**: Uploading your dataset to our platform and configuring preprocessing settings.
+
+3. **Launching Training**: Configuring and starting your LoRA training job.
+
+The following sections will guide you through each step in detail.
+
+<CardGroup cols={3}>
+  <Card
+    title="Source Dataset"
+    icon="database"
+    href="/lora-training/sourcing-dataset"
+  >
+    Learn how to build an effective dataset
+  </Card>
+  <Card
+    title="Upload Data"
+    icon="cloud-arrow-up"
+    href="/lora-training/uploading-data"
+  >
+    Upload and process your training data
+  </Card>
+  <Card
+    title="Train LoRA"
+    icon="gear"
+    href="/lora-training/training-job"
+  >
+    Configure and launch training jobs
+  </Card>
+</CardGroup>

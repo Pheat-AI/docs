@@ -1,0 +1,100 @@
+---
+title: Testing Your LoRA
+description: "How to test and evaluate your trained LoRA models"
+---
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full aspect-video"
+  src="https://storage.googleapis.com/remade-v2/website/Explainer%20Video%20%233%20V2.mp4"
+></video>
+# Testing Your LoRA
+
+After your LoRA training job completes, you'll want to test the results to evaluate performance and select the best epoch. This section guides you through the testing process.
+
+## Accessing Training Jobs
+
+Navigate to the Training Jobs section using the top navigation bar.
+
+<Frame caption="">
+  <img src="/images/lora/training-jobs-nav.png" alt="Training jobs navigation" />
+</Frame>
+
+## Viewing Training Jobs
+
+In the Training Jobs section, you'll see a list of all your training jobs:
+
+<Frame>
+  <img src="/images/lora/training-jobs-list.png" alt="Training jobs list" />
+</Frame>
+
+Currently, there is no real-time training progress indicator, but epochs are saved and displayed as soon as they complete. You can expand a job to see if any epochs are available while the job is still training.
+
+## Completed Training Jobs
+
+When a job is complete, you'll be able to:
+
+<Frame>
+  <img src="/images/lora/completed-job.png" alt="Completed training job" />
+</Frame>
+
+- Download individual epochs
+- View the training configuration
+- Access the training data
+- Resume training from a specific checkpoint
+- Test the best epochs
+
+## Testing Epochs
+
+To test your trained LoRA, click the "Test Best Epoch" button. This will open a testing configuration modal:
+
+<Frame>
+  <img src="/images/lora/test-modal.png" alt="Test modal" />
+</Frame>
+
+In this modal, you can:
+- Select which epochs you'd like to test
+- Enter prompts to use for testing
+- Adjust inference parameters
+
+## Configuring Your Test
+
+Complete the testing modal with your preferred settings:
+
+<Frame>
+  <img src="/images/lora/test-modal-filled.png" alt="Completed test modal" />
+</Frame>
+
+When you're ready, click the "Submit Test Request" button to launch the test.
+
+## Viewing Test Results
+
+After submitting your test request, navigate to the Testing tab to view your testing jobs:
+
+<Frame>
+  <img src="/images/lora/testing-tab.png" alt="Testing tab" />
+</Frame>
+
+## Evaluating Results
+
+Review the results of your testing job to determine which epoch performs best for your use case:
+
+<Frame>
+  <img src="/images/lora/test-results.png" alt="Test results" />
+</Frame>
+
+Compare the outputs from different epochs with various prompts to identify which one best captures your intended concept.
+
+## Next Steps
+
+After identifying the best epoch, you can:
+1. Download the model for use in your projects
+2. Share your LoRA with the community
+3. Continue iterating on your training process with new data or parameters
+
+<Tip>
+When sharing your LoRA on platforms like Civitai, please tag Remade and include a link to our Discord. We'd love to see what you've created!
+</Tip> 

@@ -1,0 +1,67 @@
+---
+title: Sourcing Your Dataset
+description: "Guidelines for creating effective LoRA training datasets"
+---
+
+# Sourcing Your Dataset
+
+The quality and specificity of your dataset directly determine the effectiveness of your trained LoRA. This section provides guidance on how to build a dataset that will produce good results.
+
+## Define Your Goal
+
+Before collecting data, clearly identify what you want your LoRA to achieve. Your goal might be:
+
+- A specific motion style (dance movements, walking style)
+- A clothing or visual style
+- Character appearance or behavior
+- Environmental or scene characteristics
+
+The more specific your objective, the better your dataset will perform.
+
+## Selecting Content
+
+### Consistency
+
+Choose videos or images that clearly and consistently demonstrate the action, style, or elements you want your LoRA to learn. Consistency is crucial for the model to recognize patterns effectively.
+
+### Quality
+
+When selecting media for your dataset, prioritize:
+- Clear visuals
+- Stable lighting conditions
+- Minimal artifacts
+- Higher resolution content
+
+Avoid blurry, pixelated, or overly compressed media as these can introduce unwanted artifacts into your trained model.
+
+### Specificity
+
+Limit each dataset to a single concept or motion to avoid confusion in the training process. If you need multiple variations, prepare separate datasets for each variation.
+
+### Diversity Within Bounds
+
+While maintaining consistency in your core concept, include slight variations in:
+- Angles
+- Backgrounds
+- Scenarios
+
+This controlled diversity helps the model generalize better while maintaining focus on the specific elements you want it to learn.
+
+## Dataset Size
+
+For most LoRA training purposes:
+- Start with datasets containing 10-20 videos/images
+- You can use more data for more complex concepts or better results, but this will increase training time
+- Quality is generally more important than quantity
+
+## Framerate and Resolution
+
+Our platform automatically handles technical aspects like optimal framerate and resolution for processing your data. You don't need to preprocess your media files in these dimensions.
+
+<Tip>
+For best results, focus on selecting media that clearly demonstrates your target concept rather than worrying about technical specifications.
+</Tip>
+
+## Next Steps
+
+Once you've prepared your dataset according to these guidelines, you're ready to [upload your data](/lora-training/uploading-data) to the platform. 
