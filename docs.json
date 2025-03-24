@@ -1,55 +1,38 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Remade Video Training",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#00A0E6",
+    "light": "#00A0E6",
+    "dark": "#00A0E6"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "LoRA Training",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Getting Started with LoRA",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "lora-training/introduction"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Step-by-Step Guide",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
+              "lora-training/sourcing-dataset",
+              "lora-training/uploading-data",
+              "lora-training/training-job",
+              "lora-training/testing-lora",
+              "lora-training/conclusion"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Advanced",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "lora-training/best-practices"
             ]
           }
         ]
@@ -83,20 +66,21 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:info@remade.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Trainer",
+      "href": "https://app.remade.ai"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/Remade_AI",
+      "github": "https://github.com/Pheat-AI",
+      "linkedin": "https://www.linkedin.com/company/remade-ai",
+      "discord": " https://discord.com/invite/7tsKMCbNFC"
     }
   }
 }

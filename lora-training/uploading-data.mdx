@@ -1,0 +1,133 @@
+---
+title: Uploading Your Data
+description: "How to upload and process your dataset on the Remade platform"
+---
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full aspect-video"
+  src="https://storage.googleapis.com/remade-v2/website/Explainer%20Video%20%231%20V2.mp4"
+></video>
+
+
+After [sourcing your dataset](/lora-training/sourcing-dataset), the next step is to upload it to our platform for processing. This section walks you through the process.
+
+## Accessing the Upload Page
+
+Navigate to the Upload page using the top navigation bar of the platform.
+
+<Frame caption="Upload navigation">
+  <img src="/images/lora/upload/upload-navigation.png" alt="Upload navigation" />
+</Frame>
+
+## Uploading Your Files
+
+On the Upload page, you'll see an interface for uploading your data files:
+
+You can:
+- Drag and drop files directly onto the upload area
+- Click to browse and select files from your device
+- Upload multiple files simultaneously
+
+
+As your files upload, you'll see progress indicators for each file and an overall progress bar. Wait for all files to complete uploading before proceeding to the next step.
+
+<Frame caption="Upload progress">
+  <img src="/images/lora/upload/upload-progress.png" alt="Upload progress" />
+</Frame>
+
+
+After your files have uploaded, you'll need to select which ones to process:
+
+Options:
+- Click individual files to select them
+- Use the "Select All" button to include all uploaded files
+- After making your selection, click the "Next" button to proceed
+
+<Frame caption="Data selection">
+  <img src="/images/lora/upload/upload-select.png" alt="Data selection" />
+</Frame>
+
+## Processing Settings
+
+<Frame caption="Processing settings">
+  <img src="/images/lora/upload/processing-settings.png" alt="Processing settings" />
+</Frame>
+
+After selecting your data, you'll configure the processing settings:
+
+### Model Type
+Select the type of model to prepare the data for:
+- Hunyuan
+- Wan
+
+### Trigger Phrase (NEEDS WORK)
+Enter a token (trigger word) that will be used to invoke your LoRA after training. For best results:
+- Use rare words or unique combinations to avoid conflicts
+- A common approach is to replace vowels with numbers (e.g., "Pixar Style" → "p1x4r_styl3")
+
+### Captioning Model System Prompt
+Enter a system prompt for the captioning model that will be used to generate descriptions for your media. An example is provided that you can modify to fit your needs.
+
+When you're satisfied with your settings, click "Start Processing" to begin preparing your data for training.
+
+
+
+
+## Viewing Processing Jobs
+
+After starting processing, you'll be redirected to the processing jobs page. Here you can monitor all your data processing jobs:
+
+<Frame caption="Processing jobs">
+  <img src="/images/lora/upload/processing-view.png" alt="Processing jobs" />
+</Frame>
+
+This page shows:
+- Progress of current processing jobs
+- Status indicators for each job
+- Options to expand jobs to view details
+
+<Note>
+Processing longer videos may take more time. The progress tracker will keep you informed of the current status.
+</Note>
+
+## Editing Captions
+
+
+You can review and edit the automatically generated captions for each piece of data:
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full aspect-video"
+  src="https://storage.googleapis.com/remade-v2/website/Explainer%20Video%20Edit%20Caption.mp4"
+></video>
+
+It's important to ensure that:
+- Your trigger phrase is present in each caption
+- The trigger phrase is integrated in a meaningful way
+- Captions accurately describe the content
+
+Click on any caption to edit it directly.
+
+## Selecting Data for Training
+
+Once you're satisfied with the captions, select the data you want to use for training:
+
+<Frame caption="Select training data">
+  <img src="/images/lora/upload/processing-select.png" alt="Select training data" />
+</Frame>
+
+Options:
+- Click individual images/videos to select them
+- Use the "Select All" button to include everything
+- **After making your selection, scroll back to the top of the page and click the "Configure Training" button**
+
+## Next Steps
+
+After selecting your training data and clicking "Configure Training," you'll proceed to [launching a training job](/lora-training/training-job). 
