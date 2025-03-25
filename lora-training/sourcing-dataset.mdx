@@ -3,49 +3,97 @@ title: Sourcing Your Dataset
 description: "Guidelines for creating effective LoRA training datasets"
 ---
 
-# Sourcing Your Dataset
 
-The quality and specificity of your dataset directly determine the effectiveness of your trained LoRA. This section provides guidance on how to build a dataset that will produce good results.
+One of the most important steps in training a LoRA is sourcing a high-quality dataset. The quality and specificity of your dataset directly determine the effectiveness of your trained LoRA. This section provides guidance on how to build a dataset that will produce great results.
 
-## Define Your Goal
+## Define Your Goal - Specificity
 
-Before collecting data, clearly identify what you want your LoRA to achieve. Your goal might be:
+Before any data is collected, it is important to clearly define what you want your LoRA to achieve. If you cannot do this, you will end up with a scattered dataset that the model will struggle to learn.
 
-- A specific motion style (dance movements, walking style)
-- A clothing or visual style
-- Character appearance or behavior
-- Environmental or scene characteristics
+Your goal might be:
+- A transformation, like a character turning into the Incredible Hulk.
+- A type of character motion, like a dance style or martial arts move.
+- A type of camera motion, like a dolly shot or a crane shot.
+- A character.
+- Environmental or scene characteristics, like a fantasy landscape or a type of camera lens.
 
 The more specific your objective, the better your dataset will perform.
+
+Let us take a look at an example. If we are trying to train a LoRA to generate videos with a fisheye lens, we need to be specific about how strong the distortion is:
+
+<Frame caption="High distortion fisheye lens">
+  <img src="/images/lora/source/fisheye1.webp" alt="High distortion fisheye lens" />
+</Frame>
+
+<Frame caption="Very high distortion Tiny Planet fisheye lens">
+  <img src="/images/lora/source/fisheye2.jpg" alt="very high distortion Tiny Planet fisheye lens" />
+</Frame>
+
+For the best results for this fisheye lens LoRA, we need to ensure that only one level of distortion is present in the dataset (or at least similar levels). We would not want to mix any Little Planet images with lower distortion fisheye images otherwise the model will not learn one specific type of distortion well.
 
 ## Selecting Content
 
 ### Consistency
 
-Choose videos or images that clearly and consistently demonstrate the action, style, or elements you want your LoRA to learn. Consistency is crucial for the model to recognize patterns effectively.
+Once you have clearly defined your goal, you must select images or videos that clearly and consistently demonstrate the action, style, or elements you want your LoRA to learn. Consistency is crucial for the model to recognize patterns effectively. You do not want to include videos that only feature the effect you're trying to train for a small duration of the overall video.
 
 ### Quality
 
 When selecting media for your dataset, prioritize:
 - Clear visuals
 - Stable lighting conditions
-- Minimal artifacts
+- Minimal artifacts 
 - Higher resolution content
 
-Avoid blurry, pixelated, or overly compressed media as these can introduce unwanted artifacts into your trained model.
-
-### Specificity
-
-Limit each dataset to a single concept or motion to avoid confusion in the training process. If you need multiple variations, prepare separate datasets for each variation.
+Some things to avoid:
+- Blurry, pixelated, or overly compressed media
+- Videos with lots of fast cuts (this can introduce unpredictable cuts in inference, which ruins the flow of the video)
+- Videos or images with watermarks, logos, subtitles, or other distracting elements, as these will get learned too!
+- Videos and images with black bars (cropping and resizing in a video editor may be necessary)
 
 ### Diversity Within Bounds
 
-While maintaining consistency in your core concept, include slight variations in:
-- Angles
-- Backgrounds
-- Scenarios
+We have spoken about the importance of consistency and specificity in the previous sections. However, we would not train a LoRA on a dataset of near-identical images or videos, or it will fail to generalize in inference. As long as the core concept is present, having variations in other aspects of the image or video is best. For example, for a Hulk transformation LoRA, we would include many different videos of the transformation.
 
-This controlled diversity helps the model generalize better while maintaining focus on the specific elements you want it to learn.
+## Downloading Media
+
+The best source of video content is YouTube. The recommended tool to download videos from YouTube easily is yt-dlp. Below you will find the GitHub repository for the tool. To get started, you can install yt-dlp using pip:
+
+```bash
+pip install yt-dlp
+```
+
+<CardGroup cols={1}>
+  <Card
+    title="yt-dlp"
+    icon="video"
+    href="https://github.com/yt-dlp/yt-dlp"
+  >
+    Check out the yt-dlp GitHub repository for more information and installation instructions.
+  </Card>
+</CardGroup>
+
+The best source of images is Google Images. If Google Images does not have high-quality images for the effect you are trying to train, you can try the following alternatives:
+
+<CardGroup cols={2}>
+  <Card
+    title="Pexels"
+    icon="image"
+    href="https://www.pexels.com/"
+  >
+    Pexels is a free stock photo and video platform.
+  </Card>
+    <Card
+    title="Unsplash"
+    icon="image"
+    href="https://unsplash.com/"
+  >
+    Unsplash has both free and paid options for images.
+  </Card>
+
+</CardGroup>
+
+
 
 ## Dataset Size
 
@@ -53,13 +101,14 @@ For most LoRA training purposes:
 - Start with datasets containing 10-20 videos/images
 - You can use more data for more complex concepts or better results, but this will increase training time
 - Quality is generally more important than quantity
+- As long as you have at least 30 seconds total of high-quality video content, the LoRA training should work well. 40 seconds and above is recommended though, and there is usually no need to go above 3 minutes.
 
 ## Framerate and Resolution
 
 Our platform automatically handles technical aspects like optimal framerate and resolution for processing your data. You don't need to preprocess your media files in these dimensions.
 
 <Tip>
-For best results, focus on selecting media that clearly demonstrates your target concept rather than worrying about technical specifications.
+For best results, focus on selecting media that clearly demonstrates your target concept rather than worrying about technical specifications like aspect ratio and frame rate.
 </Tip>
 
 ## Next Steps
