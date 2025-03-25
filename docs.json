@@ -14,7 +14,7 @@
         "tab": "LoRA Training",
         "groups": [
           {
-            "group": "Getting Started with LoRA",
+            "group": "Getting Started with Remade",
             "pages": [
               "lora-training/introduction"
             ]
@@ -28,12 +28,6 @@
               "lora-training/testing-lora",
               "lora-training/conclusion"
             ]
-          },
-          {
-            "group": "Advanced",
-            "pages": [
-              "lora-training/best-practices"
-            ]
           }
         ]
       }
@@ -41,18 +35,13 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://discord.com/invite/7tsKMCbNFC",
+          "icon": "Discord"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://www.rehansheikh.com/blog",
           "icon": "newspaper"
         }
       ]

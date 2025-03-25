@@ -3,9 +3,7 @@ title: Conclusion
 description: "Congratulations on training your LoRA model"
 ---
 
-# Conclusion
-
-Congratulations! You've successfully trained a LoRA model on the Remade platform. By following the steps in this guide, you've learned how to:
+You've successfully trained a LoRA model on the Remade platform. By following the steps in this guide, you've learned how to:
 
 1. [Source high-quality data](/lora-training/sourcing-dataset) for training
 2. [Upload and process your dataset](/lora-training/uploading-data) on the platform
@@ -19,6 +17,73 @@ We encourage you to share your creations with the wider AI community. If you pos
 - Please tag "Remade" in your post
 - Include a link to our [Discord community](https://discord.com/invite/7tsKMCbNFC)
 - Share your process and any tips you discovered
+
+<AccordionGroup>
+  <Accordion title="LoRA Sharing Template">
+    Here's a template you can copy and use when sharing your LoRA:
+
+    ```
+    Request a [Model Name] LoRA on our Discord and we will train and open-source it for free.
+
+    Join our Discord to generate videos of the [Your LoRA Name] for free. https://discord.com/invite/7tsKMCbNFC
+
+    [Model Name] [Version]:
+
+    Trained on [description of training data]. This was trained on the [base model name].
+
+    The trigger word is: '[your trigger word]'
+
+    Recommended Settings:
+
+    LoRA strength = [value]
+    [Any other relevant settings]
+
+    Prompt Examples:
+
+    [Example prompt 1]
+
+    [Example prompt 2]
+
+    Let me know if there are any questions, I'll be happy to help!
+    ```
+
+  </Accordion>
+
+  <Accordion title="Wan2.1 LoRA Example">
+    ```
+    Request a Wan2.1 LoRA on our Discord and we will train and open-source it for free.
+
+    Join our Discord to generate videos of the 360 Degree Rotation LoRA for free.
+
+    Wan2.1 14B I2V 480p v1.0:
+
+    Trained on 30 seconds of video comprised of 12 short clips (each clip captioned separately) of things being rotated 360 degrees. This was trained on the Wan.21 14B I2V 480p model.
+
+    The trigger word is: 'r0t4tion 360 degrees rotation'
+
+    See below for some prompt examples that worked well for me. You can also check the videos I've posted here for the captions that were used to generate them. For each video the input image is just the first frame.
+
+    Recommended Settings:
+
+    LoRA strength = 1.0
+    Embedded guidance scale = 6.0
+    Flow shift = 5.0
+
+    Here's a link to the Wan2.1 I2V LoRA inference workflow I used to generate these videos: https://huggingface.co/Remade/Squish/blob/main/workflow/wan_img2video_lora_workflow.json
+
+    This is a slight modification to Kijai's version, with the main difference being the addition of the WanVideo Lora Select node, connected to the 'lora' field of the WanVideo Lora Select node. Find Kijai's original workflow here:
+    https://github.com/kijai/ComfyUI-WanVideoWrapper/blob/main/example_workflows/wanvideo_480p_I2V_example_02.json
+
+    Prompt Examples:
+
+    The video shows a man seated on a chair. The man and the chair performs a r0t4tion 360 degrees rotation.
+
+    The video features a Pomeranian puppy sitting on a gravel surface, and the puppy undergoes a r0t4tion 360 degrees rotation.
+
+    Let me know if there are any questions, I'll be happy to help!
+    ```
+  </Accordion>
+</AccordionGroup>
 
 ## Community Resources
 
@@ -37,7 +102,7 @@ Join our vibrant community to:
     Join our Discord server for real-time discussion and support
   </Card>
   <Card
-    title="Remade AI Platform"
+    title="Remade AI"
     icon="rocket"
     href="https://app.remade.ai"
   >
