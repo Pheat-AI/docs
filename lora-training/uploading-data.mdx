@@ -64,10 +64,15 @@ Select the type of model to prepare the data for:
 - Hunyuan
 - Wan
 
-### Trigger Phrase (NEEDS WORK)
-Enter a token (trigger word) that will be used to invoke your LoRA after training. For best results:
-- Use rare words or unique combinations to avoid conflicts
+### Trigger Phrase
+Enter a trigger phrase that will be used to invoke your LoRA after training. For best results:
+- The first word should be rare words or unique combinations of characters to avoid conflicts
 - A common approach is to replace vowels with numbers (e.g., "Pixar Style" → "p1x4r_styl3")
+- The rest of the phrase should be a short phrase that describes the effect/style/character etc.
+
+<Note>
+Example trigger phrases: l3g0_5ty13 Lego animation style, t0r54d0 realistic tornado, e13c7r1c electricity effect
+</Note>
 
 ### Captioning Model System Prompt
 Enter a system prompt for the captioning model that will be used to generate descriptions for your media. An example is provided that you can modify to fit your needs.
