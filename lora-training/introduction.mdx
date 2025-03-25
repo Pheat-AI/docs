@@ -3,9 +3,7 @@ title: LoRA Trainer Introduction
 description: "Learn how to train LoRA models on the Remade platform"
 ---
 
-# Introduction to LoRA Training
-
-Welcome to the Remade LoRA Trainer! This guide will walk you through the process of training LoRA (Low-Rank Adaptation) models on our platform. LoRA is a technique that allows you to efficiently fine-tune large language models for specific tasks or styles.
+Welcome to the Remade LoRA Trainer! This guide will walk you through the process of training LoRA (Low-Rank Adaptation) models on our platform. LoRA is a technique that allows you to efficiently fine-tune large video models for specific effects/styles/characters etc.
 
 <video
   autoPlay
@@ -16,14 +14,6 @@ Welcome to the Remade LoRA Trainer! This guide will walk you through the process
   src="https://storage.googleapis.com/remade-v2/website/Main%20Launch%20Video%20V2.mp4"
 ></video>
 
-## What is LoRA?
-
-LoRA (Low-Rank Adaptation) is an efficient fine-tuning technique that significantly reduces the number of trainable parameters by adding pairs of rank-decomposition matrices to existing weights. This approach:
-
-- Reduces memory requirements
-- Speeds up training
-- Enables faster switching between different adaptations
-- Maintains quality comparable to full fine-tuning
 
 ## Overview of the Training Process
 
@@ -58,5 +48,12 @@ The following sections will guide you through each step in detail.
     href="/lora-training/training-job"
   >
     Configure and launch training jobs
+  </Card>
+  <Card
+    title="Test LoRA"
+    icon="gear"
+    href="/lora-training/testing-lora"
+  >
+    Test and evaluate your trained model
   </Card>
 </CardGroup>
