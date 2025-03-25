@@ -55,6 +55,20 @@ Some things to avoid:
 
 We have spoken about the importance of consistency and specificity in the previous sections. However, we would not train a LoRA on a dataset of near-identical images or videos, or it will fail to generalize in inference. As long as the core concept is present, having variations in other aspects of the image or video is best. For example, for a Hulk transformation LoRA, we would include many different videos of the transformation.
 
+### Example Dataset
+
+Here is an example dataset for the Explosions VFX LoRA:
+
+<CardGroup cols={2}>
+  <Card
+    title="Explosions VFX Dataset"
+    icon="video"
+    href="https://drive.google.com/drive/folders/1roilv6Whpv3S023ENT0o1n29XUXG99Ea?usp=sharing"
+  >
+    This dataset contains the original videos of explosions and the processed training data with captions.
+  </Card>
+</CardGroup>
+
 ## Downloading Media
 
 The best source of video content is YouTube. The recommended tool to download videos from YouTube easily is yt-dlp. Below you will find the GitHub repository for the tool. To get started, you can install yt-dlp using pip:
