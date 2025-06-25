@@ -1,4 +1,67 @@
 ---
 title: Video Generation
-description: "Learn how to train LoRA models on the Remade platform"
+description: "Learn how to generate videos using AI models for both text-to-video and image-to-video creation"
 ---
+
+## Text to Video
+
+To generate a video from a text prompt:
+
+1. **Access the generation toolbar** - Click on the generation icon (stars icon) in the left toolbar to make the generation toolbar appear.
+2. **Switch to Video mode** - Select the "Video" tab in the generation toolbar.
+3. **Write your prompt** - Enter a descriptive text prompt describing the video you want to create and select the desired apsect ratio and video model.
+4. **Enhance your prompt (optional)** - Click the "Enhance" button to automatically improve your prompt with more detail and creative elements.
+5. **Generate** - Click the generate button to create your video.
+
+<Frame>
+  <video
+    src="https://storage.googleapis.com/remade-v2/website/text_to_video.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{ width: "100%", height: "auto" }}
+  />
+</Frame>
+
+<Tip>
+  **Pro tip:** When using Veo, make sure you add a description of the audio to
+  get better results with synchronized sound and visuals.
+</Tip>
+
+## Image to Video
+
+Transform static images into dynamic videos using existing images as starting or ending frames:
+
+1. **Select an image** - Click on any image in your canvas that you want to use as a reference
+2. **Set as reference** - Click the "Reference" button that appears when the image is selected
+3. **Choose frame type** - Select how you want to use the image:
+   - **Add as reference** - Use the image as style/content guidance
+   - **Use as start frame** - Begin the video with this image
+   - **Use as end frame** - End the video with this image
+4. **Write your prompt (optional)** - Add a text description for the video motion or transformation
+5. **Generate** - Click the generate button to create your video
+
+<Frame>
+  <video
+    src="https://storage.googleapis.com/remade-v2/website/image_to_video.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{ width: "100%", height: "auto" }}
+  />
+</Frame>
+
+<Note>
+  You can use the same image for both start and end frames to create a loop, or
+  use different images to create a transformation between two states.
+</Note>
+
+## Tips for Better Video Results
+
+- **Be specific about motion** - Describe camera movements, object actions, and scene dynamics.
+- **Use a start frame** - Adding a start frame helps conserve credits, as generating images is faster and cheaper. Starting with a great image can significantly enhance your video creation process.
+- **Use clear references** - High-quality reference images produce better video results.
+- **Experiment with frame types** - Try different combinations of start frames, end frames, and references.
+- **Make sure to inspect the enhanced prompt** - Sometimes, enhancing the prompt might include details that you don't want.
