@@ -19,7 +19,6 @@
               "canvas/introduction",
               "canvas/quickstart",
               "canvas/navigation-basics"
-        
             ]
           },
           {
@@ -33,9 +32,7 @@
           {
             "group": "Canvas Organization",
             "pages": [
-              "canvas/side-toolbar",
-              "canvas/sections",
-              "canvas/text-and-shapes"
+              "canvas/sections"         
             ]
           },
           {
@@ -56,28 +53,6 @@
             "group": "Collaboration",
             "pages": [
               "canvas/sharing-canvases"
-              
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "LoRA Training",
-        "groups": [
-          {
-            "group": "Getting Started with Remade",
-            "pages": [
-              "lora-training/introduction"
-            ]
-          },
-          {
-            "group": "Step-by-Step Guide",
-            "pages": [
-              "lora-training/sourcing-dataset",
-              "lora-training/uploading-data",
-              "lora-training/training-job",
-              "lora-training/testing-lora",
-              "lora-training/conclusion"
             ]
           }
         ]
@@ -89,11 +64,6 @@
           "anchor": "Community",
           "href": "https://discord.com/invite/7tsKMCbNFC",
           "icon": "Discord"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://www.rehansheikh.com/blog",
-          "icon": "newspaper"
         }
       ]
     }
@@ -111,7 +81,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Trainer",
+      "label": "Remade Canvas",
       "href": "https://app.remade.ai"
     }
   },
@@ -120,7 +90,7 @@
       "x": "https://x.com/Remade_AI",
       "github": "https://github.com/Pheat-AI",
       "linkedin": "https://www.linkedin.com/company/remade-ai",
-      "discord": " https://discord.com/invite/7tsKMCbNFC"
+      "discord": "https://discord.com/invite/7tsKMCbNFC"
     }
   }
 }

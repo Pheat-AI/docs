@@ -1,4 +1,98 @@
 ---
 title: Video Operations
-description: "Learn how to train LoRA models on the Remade platform"
+description: "Learn how to extend, upscale, and enhance your videos with advanced video operations"
 ---
+
+## Expand/Outpaint Video
+
+Expand your video to different aspect ratios while maintaining the original content:
+
+1. **Select your video** - Click on the video you want to extend
+2. **Access edit options** - Click the "Edit" button
+3. **Choose expand** - Click "Expand" to access aspect ratio options
+4. **Select new aspect ratio** - Choose your desired aspect ratio for the expanded video
+5. **Generate** - Click "Apply" to create the new video at the desired aspect ratio
+
+<Frame>
+  <video
+    src="https://storage.googleapis.com/remade-v2/website/expand_video.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{ width: "100%", height: "auto" }}
+  />
+</Frame>
+
+## Video Upscaling
+
+Enhance your video's definition and quality with AI-powered upscaling:
+
+1. **Select your video** - Click on the video you want to upscale
+2. **Access upscale options** - Click ""Upscale" from the edit menu
+3. **Adjust advanced settings** (optional) - Adjust these key parameters:
+   - **Creativity** - Controls how much the AI enhances and adds new details while upscaling (higher values add more creative enhancements)
+   - **Resemblance** - Controls how closely the result matches the original video (higher values maintain closer fidelity to the source)
+4. **Generate** - Click "Apply" to upscale your video
+
+<Frame>
+  <video
+    src="https://storage.googleapis.com/remade-v2/website/upscale_video_final.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{ width: "100%", height: "auto" }}
+  />
+</Frame>
+
+## Extending a Video
+
+Create longer-form content by seamlessly connecting multiple video generations:
+
+1. **Select Video** – Select a video and click "Extend" from the video options.
+2. **Automatic Frame Extraction** – The final frame of your selected video is automatically added as the first frame in the generation toolbar.
+3. **Generate Continuation** – Use the same model you used for the original video to ensure a consistent style and frame rate, then generate a new video that picks up right where the last one ended.
+4. **Repeat as Needed** – Continue this process to build longer scenes, fluid transitions, or full narrative sequences.
+
+<Frame>
+  <video
+    src="https://storage.googleapis.com/remade-v2/website/extend_video.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{ width: "100%", height: "auto" }}
+  />
+</Frame>
+
+<Tip>
+  **Pro tip:** **Pro tip:** You can use **"Extract Last Frame"** to pull the final frame of any video and place it directly in your canvas. This is perfect for making supershots, quick edits, or creating seamless transitions.
+
+</Tip>
+
+## Stitch Videos
+
+Combine multiple videos into a single seamless sequence using the stitch mode:
+
+1. **Activate stitch mode** - Navigate to the left-hand toolbar and click "Stitch Mode"
+2. **Access stitch toolbar** - The stitch toolbar will appear at the bottom of your screen
+3. **Add videos to sequence** - Select the videos you want to combine and add them to the stitch toolbar in your desired order
+4. **Generate final video** - Click "Generate" to stitch all videos together, creating one continuous video file
+
+<Frame>
+  <video
+    src="https://storage.googleapis.com/remade-v2/website/extend_video1.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{ width: "100%", height: "auto" }}
+  />
+</Frame>
+
+<Note>
+  Videos will be stitched together in the order they appear in the stitch
+  toolbar. You can reorder them by dragging and dropping before generating the
+  final result.
+</Note>
